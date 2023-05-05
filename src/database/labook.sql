@@ -90,3 +90,5 @@ VALUES (
 INSERT INTO
     likes_dislikes(user_id, post_id, like)
 VALUES ('u002', 'p001', 1), ('u003', 'p001', 1), ('u004', 'p001', 1), ('u005', 'p001', 1), ('u006', 'p001', 1);
+
+SELECT * FROM posts
