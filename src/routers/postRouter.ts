@@ -4,7 +4,6 @@ import { PostController } from "../controller/PostController"
 import { PostDatabase } from "../database/PostDatabase"
 import { IdGenerator } from "../services/IdGenerator"
 import { TokenManager } from "../services/TokenManager"
-import { HashManager } from "../services/HashManager"
 
 export const postRouter = express.Router()
 
@@ -16,6 +15,9 @@ const postController = new PostController(
     )
 )
 
-postRouter.get("/", postController.getAllPosts)
+postRouter.post('/',postController.createPost)
+postRouter.get('/', postController.getPosts)
+postRouter.put("/:id", postController.editPost)
+postRouter.delete("/:id", postController.deletePost)
 
-postRouter.post("/posts", postController.createPost)
+postRouter.put("/:id/like", postController.likeOrDislikePost)
