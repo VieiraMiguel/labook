@@ -3,6 +3,12 @@ export enum USER_ROLES {
     ADMIN = "ADMIN"
 }
 
+export interface TokenPayload {
+    id: string,
+    name: string,
+    role: USER_ROLES
+}
+
 export interface UserDB {
     id: string;
     name: string;
@@ -20,12 +26,6 @@ export interface UserModel {
     createdAt: string
 }
 
-export interface TokenPayload {
-    id: string,
-    name: string,
-    role: USER_ROLES
-}
-
 export class User {
     constructor(
         private id: string,
@@ -40,36 +40,48 @@ export class User {
         return this.id;
     }
 
+    public setId(value: string): void {
+        this.id = value
+    }
+
     public getName(): string {
         return this.name;
     }
-    public setName(value: string) {
+
+    public setName(value: string): void {
         this.name = value;
     }
 
     public getEmail(): string {
         return this.email;
     }
-    public setEmail(value: string) {
+    
+    public setEmail(value: string): void {
         this.email = value;
     }
 
-    public getPassaword(): string {
+    public getPassword(): string {
         return this.password;
     }
-    public setPassword(value: string) {
+
+    public setPassword(value: string): void {
         this.password = value;
     }
 
     public getRole(): USER_ROLES {
         return this.role;
     }
-    public setRole(value: USER_ROLES) {
+
+    public setRole(value: USER_ROLES): void {
         this.role = value;
     }
 
     public getCreatedAt(): string {
         return this.createdAt;
+    }
+
+    public setCreatedAt(value: string): void {
+        this.createdAt = value
     }
 
     public toDBModel(): UserDB {

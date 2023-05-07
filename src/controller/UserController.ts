@@ -2,8 +2,8 @@ import { Request, Response } from "express";
 import { ZodError } from "zod";
 import { BaseError } from "../errors/BaseError";
 import { UserBusiness } from "../business/UserBusiness";
-import { SignupSchema } from "../dtos/users/Signup.dto";
-import { LoginSchema } from "../dtos/users/Login.dto";
+import { SignupSchema } from "../dtos/users/signup.dto";
+import { LoginSchema } from "../dtos/users/login.dto";
 
 export class UserController {
     constructor(
@@ -21,6 +21,7 @@ export class UserController {
             const output = await this.userBusiness.signup(input)
 
             res.status(201).send(output)
+
         } catch (error) {
             console.log(error)
 
