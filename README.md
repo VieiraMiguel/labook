@@ -2,7 +2,7 @@
 
 Aplicação back end de servidor express com banco de dados sqlite3.<br>
 
-O Labook é uma rede social com o objetivo de promover a conexão e interação entre pessoas. Quem se cadastrar no aplicativo poderá criar e curtir publicações. <br>
+O Labook é uma rede social com o objetivo de promover a conexão e interação entre pessoas. Quem se cadastrar no aplicativo poderá criar e editar publicações próprias e também curtir ou não curtir (like/dislike) publicações de outros usuários cadastrados. <br>
 
 ## Documentação
 https://documenter.getpostman.com/view/25826613/2s93eYTrji
