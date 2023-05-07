@@ -1,8 +1,8 @@
-import express from 'express'
-import cors from 'cors'
-import dotenv from 'dotenv'
-import { userRouter } from './routers/userRouter'
-import { postRouter } from './routers/postRouter'
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import { userRouter } from "./routers/userRouter";
+import { postRouter } from "./routers/postRouter";
 
 dotenv.config()
 
@@ -18,7 +18,3 @@ app.listen(Number(process.env.PORT) || 3003, () => {
 app.use('/users', userRouter)
 
 app.use('/posts', postRouter)
-
-app.get('/ping', (req, res) => {
-    res.send('Pong')
-})

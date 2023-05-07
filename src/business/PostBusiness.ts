@@ -43,11 +43,11 @@ export class PostBusiness {
         const post = new Post(
             id,
             content,
+            0,
+            0,
+            new Date().toISOString(),
+            new Date().toISOString(),
             payload.id,
-            0,
-            0,
-            new Date().toISOString(),
-            new Date().toISOString(),
             payload.name
         )
 
@@ -80,12 +80,12 @@ export class PostBusiness {
             .map((postWithCreatorName) => {
                 const post = new Post(
                     postWithCreatorName.id,
-                    postWithCreatorName.creator_id,
                     postWithCreatorName.content,
                     postWithCreatorName.likes,
                     postWithCreatorName.dislikes,
                     postWithCreatorName.created_at,
                     postWithCreatorName.updated_at,
+                    postWithCreatorName.creator_id,
                     postWithCreatorName.creator_name
                 )
 
@@ -122,12 +122,12 @@ export class PostBusiness {
 
         const post = new Post(
             postDB.id,
-            postDB.creator_id,
             postDB.content,
             postDB.likes,
             postDB.dislikes,
             postDB.created_at,
-            postDB.updated_at,
+            new Date().toISOString(),
+            postDB.creator_id,
             payload.name
         )
 
@@ -191,12 +191,12 @@ export class PostBusiness {
 
         const post = new Post(
             postDBWithCreatorName.id,
-            postDBWithCreatorName.creator_id,
             postDBWithCreatorName.content,
             postDBWithCreatorName.likes,
             postDBWithCreatorName.dislikes,
             postDBWithCreatorName.created_at,
             postDBWithCreatorName.updated_at,
+            postDBWithCreatorName.creator_id,
             postDBWithCreatorName.creator_name
         )
 
