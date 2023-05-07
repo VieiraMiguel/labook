@@ -10,7 +10,7 @@ https://documenter.getpostman.com/view/25826613/2s93eYTrji
 ## Passo a Passo
 ```bash
 # Clone este repositório
-$ git clone linkrepo
+$ git clone link.do.repositório
 
 # Acesse a pasta do projeto no seu terminal
 $ cd labook
@@ -18,7 +18,7 @@ $ cd labook
 # Instale as dependências
 $ npm install
 
-# Configure o arquivo .db e .env
+# Crie um arquivo .db e configure seu diretório corretamente em um arquivo .env conforme o exemplo contido no .env.example
 
 # A partir do arquivo .sql costrua o banco de dados
 
